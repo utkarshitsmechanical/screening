@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <title>Boxanimation test</title>
+        <link rel="icon" href="https://cdn5.vectorstock.com/i/1000x1000/52/39/letter-a-logo-flat-icon-style-vector-4925239.jpg">
+        <!-- Here i have added a icon for in the "A"  stands  for AVRL-->
+        <style>
+            #container
+            {
+                width:800px;
+                height:250px;
+                background-color:rgb(23, 23, 66);
+                margin:auto;
+                margin-top: 50px;
+                border:20px solid #171742;
+                position: relative;
+                overflow: hidden;
+            }
+            #button1{
+                padding:7px 36px 7px 36px;
+                margin-top: 50px;
+                position:absolute;
+                left:33%;
+                background-color:green;
+                border: none;
+                color: white;
+            }
+            #button2{
+                padding:7px 36px 7px 36px;
+                margin-top: 50px;
+                position:absolute;
+                left:60%;
+                background-color: red;
+                border: none;
+                color: white;
+            }
+            #box1{
+                position:absolute;
+                left:0px;
+                top:0px;
+                background-color:rebeccapurple;
+                width: 160px;
+                height:250px;
+                animation: movebox1 4s infinite linear;
+                animation-play-state: paused;
+            }
+            @keyframes movebox1{
+                0%{
+                    left:0px;
+                    top:0px;
+                }
+                50%{
+                    top:99%;
+                    left:0px;
+                }
+                100%{
+                    left:0px;
+                    top:0px;
+                }
+            }
+
+            #box2{
+                position:absolute;
+                top:0;
+                left:160px;
+                background-color:rgb(177, 57, 117);
+                width: 160px;
+                height:250px;
+                animation: movebox2 4s infinite linear;
+                animation-play-state: paused;
+            }
+            @keyframes movebox2{
+                0%{
+                    left:160px;
+                    top:0px;
+                }
+                70%{
+                    top:99%;
+                    left:160px;
+                }
+                100%{
+                    left:160px;
+                    top:0px;
+                }
+            }
+            #box3{
+                position:absolute;
+                top:0px;
+                left:320px;
+                background-color:indianred;
+                width: 160px;
+                height:250px;
+                animation: movebox3 4s infinite linear;
+                animation-play-state: paused;
+            }
+            @keyframes movebox3{
+                0%{
+                    left:320px;
+                    top:0px;
+                }
+                20%{
+                    top:99%;
+                    left:320px;
+                }
+                100%{
+                    left:320px;
+                    top:0px;
+                }
+            }
+
+
+
+            #box4{
+                position:absolute;
+                top:0px;
+                left:480px;
+                background-color:lightsalmon;
+                width: 160px;
+                height:250px;
+                animation: movebox4 4s infinite linear;
+                animation-play-state: paused;
+            }
+            @keyframes movebox4{
+                0%{
+                    left:480px;
+                    top:0px;
+                }
+                40%{
+                    top:99%;
+                    left:480px;
+                }
+                100%{
+                    left:480px;
+                    top:0px;
+                }
+            }
+
+
+
+            #box5{
+                position:absolute;
+                top:0px;
+                right:0px;
+                background-color:rgb(255,187,0);
+                width: 160px;
+                height:250px;
+                animation: movebox5 4s infinite linear;
+                animation-play-state: paused;
+            }
+            @keyframes movebox5{
+                0%{
+                    right:0px;
+                    top:0px;
+                }
+                50%{
+                    top:99%;
+                    right:0px;
+                }
+                100%{
+                    right:0px;
+                    top:0px;
+                }
+            }
+        </style>
+
+        <script>
+            function letsgo(){
+                document.getElementById("box1").style.animationPlayState="running";
+                document.getElementById("box2").style.animationPlayState="running";
+                document.getElementById("box3").style.animationPlayState="running";
+                document.getElementById("box4").style.animationPlayState="running";
+                document.getElementById("box5").style.animationPlayState="running";
+                document.getElementById('button1').style.border="2px solid blue ";
+                document.getElementById('button1').style.borderRadius="4px";
+                document.getElementById('button2').style.border="none";
+            }
+
+            function letsstop(){
+                document.getElementById("box1").style.animationPlayState="paused";
+                document.getElementById("box2").style.animationPlayState="paused";
+                document.getElementById("box3").style.animationPlayState="paused";
+                document.getElementById("box4").style.animationPlayState="paused";
+                document.getElementById("box5").style.animationPlayState="paused";
+                document.getElementById('button2').style.border="2px solid blue ";
+                document.getElementById('button2').style.borderRadius="4px";
+                document.getElementById('button1').style.border="none";
+
+            }
+        </script>
+    </head>
+    <body>
+    <div id="main-container">
+        <div id="container">
+            <div id="box1">
+
+            </div>
+            <div id="box2">
+                
+            </div>
+            <div id="box3">
+                
+            </div>
+            <div id="box4">
+                
+            </div>
+            <div id="box5">
+                
+            </div>
+        </div>
+        <button type="button" id="button1" onclick="letsgo()">Start</button>
+        <button type="button" id="button2" onclick="letsstop()">Stop</button>
+    </div>
+    </body>
+</html>
